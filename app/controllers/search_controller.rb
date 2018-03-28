@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
-
   def index
-  end 
+    @stations = Station.find_by_zip(params[:q])
+  end
 end
