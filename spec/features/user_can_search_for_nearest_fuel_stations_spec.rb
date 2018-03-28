@@ -1,11 +1,11 @@
-require 'rails_engine'
+require 'rails_helper'
 
 describe "As a user" do
   describe "When I visit the root path and fill in my zip code" do
     it "sends me a list of nearest electric and propane stations within 6 miles sorted by distance with name, address, fuel types, distance and access times" do
       visit root_path
 
-      fill_in "search", with: "80211"
+      fill_in :q, with: "80211"
       click_on "Locate"
 
       expect(page).to have_content("Stations:")
