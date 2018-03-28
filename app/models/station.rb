@@ -5,6 +5,6 @@ class Station
     @address = station_info["street_address"]
     @fuel_type = station_info["fuel_type_code"]
     @distance = station_info["distance"]
-    @access_times = station_info["access_days_times"]
+    @access_times = station_info["access_days_time"]
   end
 end
